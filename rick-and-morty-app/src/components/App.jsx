@@ -1,17 +1,17 @@
-import { Outlet, NavLink, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
 import NavBar from './NavBar.jsx'
 
 function App() {
   return (
     <div>
-      <header>
-        <a>RICK AND MORTY</a>
-          <NavBar />
-        <main>
+      <NavBar />
+      <main>
+        <Container className="py-4">
           {/* outlet is replaced by matching child route from router.jsx*/}
           <Outlet />
-        </main>
-      </header>
+        </Container>
+      </main>
     </div>
   )
 }
